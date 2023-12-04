@@ -5,10 +5,6 @@ with open('temp.txt', 'r') as f:
     text = f.read().split('\n')[:-1]
 symbolCoords = set()
 rowLen = len(text[0])
-def checkAdjSymbol(i, j):
-    if ((i + 1, j) in symbolCoords) or ((i - 1, j) in symbolCoords) or ((i, j - 1) in symbolCoords) or ((i, j + 1) in symbolCoords) or ((i + 1, j + 1) in symbolCoords) or ((i + 1, j - 1) in symbolCoords) or ((i - 1, j + 1) in symbolCoords) or ((i - 1, j - 1) in symbolCoords):
-        return True
-    return False
 def getSomeHelp(i, j):
     outputs = list()
     topSubStr = text[i][max(0, j - 3):min(j + 4, rowLen)]
