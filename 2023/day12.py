@@ -1,5 +1,5 @@
 import sys, re, copy, itertools, functools, math, collections
-with open('input.txt', 'r') as f:
+with open('temp.txt', 'r') as f:
     text = f.read().split('\n')[:-1]
 def isValid(springs, stats):
     bands = tuple(len(y) for y in (x for x in ''.join(springs).split('.') if x))

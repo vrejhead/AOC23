@@ -41,7 +41,5 @@ for seedRange in seedRanges:
     currentSeedRange = copy.copy([seedRange])
     for i, layerMapping in enumerate(allMappings):
         currentSeedRange = rangeSplit(layerMapping, currentSeedRange)
-        if i == 5 and False:
-            break
     candidates.append(min(currentSeedRange, key=lambda x: x.start).start)
 print(min(candidates))
